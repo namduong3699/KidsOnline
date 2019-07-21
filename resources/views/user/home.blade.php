@@ -7,7 +7,7 @@
 		<!--begin:: Widgets/Blog-->
 		<div class="kt-portlet kt-portlet--height-fluid kt-widget19">
 			<div class="kt-portlet__body kt-portlet__body--fit kt-portlet__body--unfill">
-				<div class="kt-widget19__pic kt-portlet-fit--top kt-portlet-fit--sides" style="min-height: 300px; background-image: url(media/products/product4.jpg)">
+				<div class="kt-widget19__pic kt-portlet-fit--top kt-portlet-fit--sides" style="min-height: 300px; background-image: url(media/products/4.jpg)">
 					<h3 class="kt-widget19__title kt-font-light">
 						Kids Online
 					</h3>
@@ -232,7 +232,8 @@
 						<!--begin:: Widgets/Blog-->
 						<div class="kt-portlet kt-portlet--height-fluid kt-widget19">
 							<div class="kt-portlet__body kt-portlet__body--fit kt-portlet__body--unfill">
-								<div class="kt-widget19__pic kt-portlet-fit--top kt-portlet-fit--sides" style="min-height: 300px; background-image: url(media/products/product4.jpg)">
+								<div class="kt-widget19__pic kt-portlet-fit--top kt-portlet-fit--sides" style="min-height: 300px; background-image: url(media/products/{{$i+1}}.jpg)">
+									<img src="media/products/{{$i+1}}.jpg" alt="" style="display: none;">
 									<h3 class="kt-widget19__title kt-font-light">
 										Tiêu đề
 									</h3>
@@ -273,7 +274,7 @@
 									</div>
 								</div>
 								<div class="kt-widget19__action">
-									<a href="#" class="btn btn-sm btn-label-brand btn-bold">Xem thêm</a>
+									<div class="btn btn-sm btn-label-brand btn-bold cd-trigger-2" style="cursor: pointer !important;">Xem thêm</div>
 								</div>
 							</div>
 						</div>
@@ -290,6 +291,7 @@
 
 <!-- END: Bài viết) -->
 <div class="post_modal">
+	
 	@include('user.modules.post_modal')
 </div>
 
