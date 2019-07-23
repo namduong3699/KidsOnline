@@ -27,6 +27,7 @@
 	<!--begin::Global Theme Styles(used by all pages) -->
 	<link href="vendors/global/vendors.bundle.css" rel="stylesheet" type="text/css" />
 	<link href="css/style.bundle.css" rel="stylesheet" type="text/css" />
+	@yield('head_custom')
 	<!--end::Global Theme Styles -->
 
 	<!--begin::Layout Skins(used by all pages) -->

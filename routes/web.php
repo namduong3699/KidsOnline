@@ -14,3 +14,11 @@
 Route::get('/', function () {
     return view('user/home');
 });
+
+Route::get('application', function(){
+	return view('user/don');
+});
+
+Route::get('post', function(){
+	return view('user/main');
+});

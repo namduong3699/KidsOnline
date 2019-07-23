@@ -16,20 +16,20 @@
 		<div id="kt_aside_menu" class="kt-aside-menu  kt-aside-menu--dropdown "	data-ktmenu-vertical="1" data-ktmenu-dropdown="1" data-ktmenu-scroll="0">		
 
 			<ul class="kt-menu__nav ">
-				<li class="kt-menu__item  kt-menu__item--active" aria-haspopup="true" >
-					<a  href="#" class="kt-menu__link ">
+				<li class="kt-menu__item {{ request()->is('/') ? 'kt-menu__item--active' : '' }} " aria-haspopup="true" >
+					<a  href="{{URL::to('/')}}" class="kt-menu__link ">
 						<i class="kt-menu__link-icon flaticon2-architecture-and-city"></i>
 						<span class="kt-menu__link-text">Trang chủ</span>
 					</a>
 				</li>
-				<li class="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true"  data-ktmenu-submenu-toggle="hover">
-					<a  href="javascript:;" class="kt-menu__link kt-menu__toggle">
+				<li class="kt-menu__item {{ request()->is('application') ? 'kt-menu__item--active' : '' }}" aria-haspopup="true"  data-ktmenu-submenu-toggle="hover"> 
+					<a  href="{{URL::to('application')}}" class="kt-menu__link">
 						<i class="kt-menu__link-icon flaticon2-mail-1"></i>
 						<span class="kt-menu__link-text">Đơn</span>
 					</a>
 				</li>
-				<li class="kt-menu__item " aria-haspopup="true">
-					<a href="index.html#.html" class="kt-menu__link ">
+				<li class="kt-menu__item {{ request()->is('post') ? 'kt-menu__item--active' : '' }}" aria-haspopup="true">
+					<a href="{{URL::to('post')}}" class="kt-menu__link ">
 						<i class="kt-menu__link-icon flaticon2-open-text-book"></i>
 						<span class="kt-menu__link-text">Bài viết</span></a>
 				</li>
