@@ -45283,6 +45283,7 @@ body {
     }
     .kt-aside .kt-aside-menu .kt-menu__nav>.kt-menu__item {
         margin-bottom: .0rem;
+        border-top: 2px solid #28B4F1;
     }
     .kt-aside .kt-aside-menu .kt-menu__nav>.kt-menu__item>.kt-menu__link {
         display: flex;
@@ -47957,3 +47958,21 @@ body {
     font-size: 13px;
 }
 /*23/07/2019*/
+
+/*class giao dien giao vien*/
+.user-pic, .rounded {
+            height: 47px;
+            width: 47px;
+        }
+.table-scrollable {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    border: 1px solid #e7ecf1;
+    margin: 10px 0 !important;
+    border-radius: 10px !important;
+}
+thead tr {
+    background: #06a3b1;
+    color: #fff;
+}
