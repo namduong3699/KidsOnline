@@ -165,7 +165,7 @@
 				<!--use below badge element instead the user avatar to display username's first letter(remove kt-hidden class to display it) -->
 				<img src="media/users/100_1.jpg" alt="">
 				<span class="kt-badge kt-badge--username kt-badge--unified-success kt-badge--lg kt-badge--rounded kt-badge--bolder">
-					Quỳnh Chi
+					{{Auth()->user()->name}}
 				</span>
 			</div>
 		</div>
@@ -180,7 +180,7 @@
 					</span>
 				</div>
 				<div class="kt-user-card__name">
-					Quỳnh Chi
+					{{Auth()->user()->name}}
 				</div>
 				<div class="kt-user-card__badge">
 					<span class="btn btn-success btn-sm btn-bold btn-font-md">23 thông báo mới</span>
@@ -258,7 +258,7 @@
 						</div>
 					</a> -->
 					<div class="kt-notification__custom kt-space-between">
-						<a href="custom/user/login-v2.html" target="_blank" class="btn btn-label btn-label-brand btn-sm btn-bold">Đăng xuất</a>
+						<a href="{{URL::to('logout')}}" class="btn btn-label btn-label-brand btn-sm btn-bold">Đăng xuất</a>
 					</div>
 				</div>
 				<!--end: Navigation -->	    
