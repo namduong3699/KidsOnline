@@ -1,7 +1,7 @@
 jQuery(document).ready(function($){
 	//final width --> this is the quick view image slider width
 	//maxQuickWidth --> this is the max-width of the quick-view panel
-	var maxQuickWidth = 1200;
+	var maxQuickWidth = 1500;
 	var sliderFinalWidth;
 	var _img = $('.kt-portlet__body').children('.kt-widget19__pic');
 	if(_img.width() <= _img.height()) {

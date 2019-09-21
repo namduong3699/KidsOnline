@@ -5,7 +5,7 @@
 		<div id="kt_header_menu" class="kt-header-menu kt-header-menu-mobile  kt-header-menu--layout-tab "  >
 			<ul class="kt-menu__nav ">
 				<li class="kt-menu__item  kt-menu__item--active "  aria-haspopup="true">
-					<a  href="index-2.html" class="kt-menu__link ">
+					<a  href="{{URL::to('attendance')}}" class="kt-menu__link ">
 						<span class="kt-menu__link-text">
 							<i class="fa fa-user"></i>
 							&nbsp;Điểm danh
@@ -13,7 +13,7 @@
 					</a>
 				</li>
 				<li class="kt-menu__item  kt-menu__item--active "  aria-haspopup="true">
-					<a  href="index-2.html" class="kt-menu__link ">
+					<a  href="{{URL::to('learn-activity')}}" class="kt-menu__link ">
 						<span class="kt-menu__link-text">
 							<i class="fa fa-book-open"></i>
 							&nbsp;Học
@@ -21,7 +21,7 @@
 					</a>
 				</li>
 				<li class="kt-menu__item  kt-menu__item--active "  aria-haspopup="true">
-					<a  href="index-2.html" class="kt-menu__link ">
+					<a  href="{{URL::to('dining')}}" class="kt-menu__link ">
 						<span class="kt-menu__link-text">
 							<i class="fa fa-fish"></i>
 							&nbsp;Ăn
@@ -29,7 +29,7 @@
 					</a>
 				</li>
 				<li class="kt-menu__item  kt-menu__item--active "  aria-haspopup="true">
-					<a  href="index-2.html" class="kt-menu__link ">
+					<a  href="{{URL::to('sleep')}}" class="kt-menu__link ">
 						<span class="kt-menu__link-text">
 							<i class="fa fa-bed"></i>
 							&nbsp;Ngủ
@@ -37,7 +37,7 @@
 					</a>
 				</li>
 				<li class="kt-menu__item  kt-menu__item--active "  aria-haspopup="true">
-					<a  href="index-2.html" class="kt-menu__link ">
+					<a  href="{{URL::to('hygienic')}}" class="kt-menu__link ">
 						<span class="kt-menu__link-text">
 							<i class="fa fa-child"></i>
 							&nbsp;Vệ sinh
@@ -45,7 +45,7 @@
 					</a>
 				</li>
 				<li class="kt-menu__item  kt-menu__item--active "  aria-haspopup="true">
-					<a  href="index-2.html" class="kt-menu__link ">
+					<a  href="{{URL::to('assessment')}}" class="kt-menu__link ">
 						<span class="kt-menu__link-text">
 							<i class="fa fa-comment-dots"></i>
 							&nbsp;Nhận xét

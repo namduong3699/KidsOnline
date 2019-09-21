@@ -6,7 +6,7 @@
 	<!-- begin:: Aside -->
 	<div class="kt-aside__brand kt-grid__item" id="kt_aside_brand">
 		<div class="kt-aside__brand-logo">
-			<a href="index-2.html">
+			<a href="{{URL::to('/')}}">
 				<img alt="Logo" src="media/logos/logo-3.png"/>
 			</a>
 		</div>
@@ -46,19 +46,19 @@
 					</a>
 				</li>
 				<li class="kt-menu__item " aria-haspopup="true">
-					<a href="index.html#.html" class="kt-menu__link ">
+					<a href="{{URL::to('survey')}}" class="kt-menu__link ">
 						<i class="kt-menu__link-icon flaticon2-checkmark"></i>
 						<span class="kt-menu__link-text">Khảo sát</span>
 					</a>
 				</li>
 				<li class="kt-menu__item " aria-haspopup="true">
-					<a href="index.html#.html" class="kt-menu__link ">
+					<a href="{{URL::to('student-messages')}}" class="kt-menu__link ">
 						<i class="kt-menu__link-icon flaticon2-chat-1"></i>
 						<span class="kt-menu__link-text">Lời nhắn</span>
 					</a>
 				</li>
 				<li class="kt-menu__item " aria-haspopup="true">
-					<a href="index.html#.html" class="kt-menu__link ">
+					<a href="{{URL::to('list-student')}}" class="kt-menu__link ">
 						<i class="kt-menu__link-icon fa fa-graduation-cap"></i>
 						<span class="kt-menu__link-text">Quản lý lớp học</span>
 					</a>
