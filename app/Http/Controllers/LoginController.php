@@ -41,7 +41,7 @@ class LoginController extends Controller
           $username = $request->input('username');
           $password = $request->input('password');
           if (Auth::attempt(['username' => $username, 'password' => $password,'type'=>1])) {
-            return redirect('/admin');
+            return redirect('/teacher');
         }
         else if(Auth::attempt(['username' => $username, 'password' => $password,'type'=>0])) 
         {

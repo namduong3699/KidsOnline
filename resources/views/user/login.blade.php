@@ -118,17 +118,17 @@
 							<!--end::Form-->
 
 							<!--begin::Divider-->
-							<div class="kt-login__divider">
+							<!-- <div class="kt-login__divider">
 								<div class="kt-divider">
 									<span></span>
 									<span>OR</span>
 									<span></span>
 								</div>
-							</div>
+							</div> -->
 							<!--end::Divider-->
 
 							<!--begin::Options-->
-							<div class="kt-login__options">
+							<!-- <div class="kt-login__options">
 								<a href="#" class="btn btn-primary kt-btn">
 									<i class="fab fa-facebook-f"></i>
 									Facebook
@@ -143,7 +143,7 @@
 									<i class="fab fa-google"></i>
 									Google
 								</a>
-							</div>
+							</div> -->
 							<!--end::Options-->
 						</div>
 						<!--end::Signin-->

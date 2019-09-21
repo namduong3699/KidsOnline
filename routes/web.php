@@ -46,7 +46,7 @@ Route::get('/logout',function(){
 	return redirect()->back();
 });
 
-Route::group(['prefix'=>'admin','middleware'=>'teacherLogin'],function(){
+Route::group(['prefix'=>'teacher','middleware'=>'teacherLogin'],function(){
 	Route::get('/', function () {
 		return view('user/home');
 	});
