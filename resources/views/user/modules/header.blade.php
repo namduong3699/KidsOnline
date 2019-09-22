@@ -163,7 +163,7 @@
 				<span class="kt-hidden kt-header__topbar-username kt-hidden-mobile">Sean</span>
 				<img class="kt-hidden" alt="Pic" src="media/users/300_25.jpg" />
 				<!--use below badge element instead the user avatar to display username's first letter(remove kt-hidden class to display it) -->
-				<img src="media/users/100_1.jpg" alt="">
+				<img src="{{Auth()->user()->img}}" alt="">
 				<span class="kt-badge kt-badge--username kt-badge--unified-success kt-badge--lg kt-badge--rounded kt-badge--bolder">
 					{{Auth()->user()->name}}
 				</span>
@@ -176,7 +176,7 @@
 					<img class="kt-hidden" alt="Pic" src="media/users/300_25.jpg" />
 					<!--use below badge element instead the user avatar to display username's first letter(remove kt-hidden class to display it) -->
 					<span class="kt-badge kt-badge--lg kt-badge--rounded kt-badge--bold kt-font-success">
-						<img src="media/users/100_1.jpg" alt="">
+						<img src="{{Auth()->user()->img}}" alt="">
 					</span>
 				</div>
 				<div class="kt-user-card__name">

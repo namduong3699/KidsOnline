@@ -38,7 +38,7 @@
 						</div>
 					</div>
 					<div class="kt-widget19__text">
-						Kidsonline cảm ơn Quỳnh Chi đã luôn đồng hành cùng chúng tôi! <br>
+						Kidsonline cảm ơn {{Auth()->user()->name}} đã luôn đồng hành cùng chúng tôi! <br>
 						Chúc bạn một ngày làm việc vui vẻ và hiệu quả !!!
 					</div>
 				</div>
@@ -114,32 +114,20 @@
 				<div class="kt-widget4">
 					
 					<div class="kt-scroll" data-scroll="true" style="height: 400px">
+						@foreach($drugs as $drug)
 						<div class="kt-widget4__item">
 							<span class="kt-widget4__icon">
 								<img src="media/users/100_1.jpg" alt="" class="app_widget_img">
 							</span>	
 							<a href="#" class="kt-widget4__title kt-widget4__title--light">
-								<span class="app_widget_name">Đỗ Anh Tùng <br></span>
-								<span>Áp dụng từ 04-07-2019 đến 31-07-2019 <br></span>
-								<span>Tình trạng đơn: Đơn thuốc chưa được sử dụng <br></span>
-								<span>Tên bệnh: ho <br></span>
-							</a> 		
-							<span class="kt-widget4__number kt-font-info">Xin nghỉ</span>
-						</div>
-						@for($i = 0; $i <=3 ; $i++)
-						<div class="kt-widget4__item">
-							<span class="kt-widget4__icon">
-								<img src="media/users/100_1.jpg" alt="" class="app_widget_img">
-							</span>	
-							<a href="#" class="kt-widget4__title kt-widget4__title--light">
-								<span class="app_widget_name">Đỗ Anh Tùng <br></span>
-								<span>Áp dụng từ 04-07-2019 đến 31-07-2019 <br></span>
+								<span class="app_widget_name">{{$drug->name}} <br></span>
+								<span>Áp dụng từ {{$drug->created_at}} đến 31-07-2019 <br></span>
 								<span>Tình trạng đơn: Đơn thuốc chưa được sử dụng <br></span>
 								<span>Tên bệnh: ho <br></span>
 							</a> 		
 							<span class="kt-widget4__number kt-font-danger">Dặn thuốc</span>
 						</div>
-						@endfor
+						@endforeach
 					</div>
 				</div>
 				
@@ -227,15 +215,14 @@
 				<!--begin: Datatable -->
 				<!-- <div class="kt-datatable" id="kt_datatable_latest_orders"></div> -->
 				<div class="row" style="margin: 0 20px;">
-					@for($i = 0; $i <= 3; $i++)
+					@foreach($news as $_news)
 					<div class="col-xl-3 col-lg-3 order-lg-2 order-xl-1">
 						<!--begin:: Widgets/Blog-->
 						<div class="kt-portlet kt-portlet--height-fluid kt-widget19">
 							<div class="kt-portlet__body kt-portlet__body--fit kt-portlet__body--unfill">
-								<div class="kt-widget19__pic kt-portlet-fit--top kt-portlet-fit--sides" style="min-height: 300px; background-image: url(media/products/{{$i+1}}.jpg)">
-									<!-- <img src="media/products/{{$i+1}}.jpg" alt="" style="display: none;"> -->
+								<div class="kt-widget19__pic kt-portlet-fit--top kt-portlet-fit--sides" style="min-height: 300px; background-image: url(media/products/{{$_news->img}})">
 									<h3 class="kt-widget19__title kt-font-light">
-										Tiêu đề
+										{{$_news->title}}
 									</h3>
 									<div class="kt-widget19__shadow"></div>
 									<div class="kt-portlet__head kt-portlet__head--noborder  kt-ribbon kt-ribbon--border-dash-hor kt-ribbon--danger kt-ribbon--left">
@@ -253,10 +240,10 @@
 										</div>
 										<div class="kt-widget19__info">
 											<a href="#" class="kt-widget19__username">
-												Tên user
+												{{$_news->name}}
 											</a>
 											<span class="kt-widget19__time">
-												20/07/2019 lúc 13:14
+												{{$_news->created_at}}
 											</span>
 										</div>
 										<div class="kt-widget19__stats">
@@ -269,8 +256,7 @@
 										</div>
 									</div>
 									<div class="kt-widget19__text">
-										Kidsonline cảm ơn Quỳnh Chi đã luôn đồng hành cùng chúng tôi! <br>
-										Chúc bạn một ngày làm việc vui vẻ và hiệu quả. Consectetur adipisicing elit. Provident, aliquam ...
+										{{str_limit($_news->content, $limit = 100)}}
 									</div>
 								</div>
 								<div class="kt-widget19__action">
@@ -280,7 +266,7 @@
 						</div>
 						<!--end:: Widgets/Blog-->	
 					</div>
-					@endfor
+					@endforeach
 				</div>
 
 				<!--end: Datatable -->

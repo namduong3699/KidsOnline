@@ -47,9 +47,7 @@ Route::get('/logout',function(){
 });
 
 Route::group(['prefix'=>'teacher','middleware'=>'teacherLogin'],function(){
-	Route::get('/', function () {
-		return view('user/home');
-	});
+	Route::get('/', 'TeacherController@index');
 
 	Route::get('home', function () {
 		return view('user/home');
