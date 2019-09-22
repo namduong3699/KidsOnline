@@ -17,9 +17,9 @@
 // 	return view('user/login');
 // });
 
-Route::Get('/', function(){
-	return view('user/login');
-});
+Route::Get('/', 'LoginController@postLogin');
+
+Route::Get('/home', 'LoginController@auth');
 
 /*
 * Login
@@ -46,6 +46,10 @@ Route::get('/logout',function(){
 	return redirect()->back();
 });
 
+Route::get('public/teacher/application/drug/{id}', 'TeacherController@appliDrug');
+Route::get('public/teacher/application/drug/confirm/{id}', 'TeacherController@appliDrugConfirm');
+Route::post('public/teacher/application/drug/confirm/', 'TeacherController@appliDrugConfirmPost');
+
 Route::group(['prefix'=>'teacher','middleware'=>'teacherLogin'],function(){
 	Route::get('/', 'TeacherController@index');
 
@@ -53,9 +57,11 @@ Route::group(['prefix'=>'teacher','middleware'=>'teacherLogin'],function(){
 		return view('user/home');
 	});
 
-// Route::get('application', function(){
-// 	return view('user/don');
-// });
+Route::get('application', 'TeacherController@appli');
+Route::get('application/drug/{id}', 'TeacherController@appliDrug');
+Route::post('application/drug/', 'TeacherController@appliDrug');
+Route::get('application/drug/confirm/{id}', 'TeacherController@appliDrugConfirm');
+Route::post('application/drug/confirm/', 'TeacherController@appliDrugConfirmPost');
 
 	Route::get('post', function(){
 		return view('user/main');

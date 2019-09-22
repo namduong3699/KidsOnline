@@ -17,19 +17,19 @@
 
 			<ul class="kt-menu__nav ">
 				<li class="kt-menu__item {{ request()->is('/') ? 'kt-menu__item--active' : '' }} " aria-haspopup="true" >
-					<a  href="{{URL::to('/')}}" class="kt-menu__link ">
+					<a  href="{{URL::to('/teacher')}}" class="kt-menu__link ">
 						<i class="kt-menu__link-icon flaticon2-architecture-and-city"></i>
 						<span class="kt-menu__link-text">Trang chủ</span>
 					</a>
 				</li>
 				<li class="kt-menu__item {{ request()->is('application') ? 'kt-menu__item--active' : '' }}" aria-haspopup="true"  data-ktmenu-submenu-toggle="hover"> 
-					<a  href="{{URL::to('application')}}" class="kt-menu__link">
+					<a  href="{{URL::to('teacher/application')}}" class="kt-menu__link">
 						<i class="kt-menu__link-icon flaticon2-mail-1"></i>
 						<span class="kt-menu__link-text">Đơn</span>
 					</a>
 				</li>
 				<li class="kt-menu__item {{ request()->is('post') ? 'kt-menu__item--active' : '' }}" aria-haspopup="true">
-					<a href="{{URL::to('post')}}" class="kt-menu__link ">
+					<a href="{{URL::to('teacher/post')}}" class="kt-menu__link ">
 						<i class="kt-menu__link-icon flaticon2-open-text-book"></i>
 						<span class="kt-menu__link-text">Bài viết</span></a>
 				</li>
@@ -58,7 +58,7 @@
 					</a>
 				</li>
 				<li class="kt-menu__item " aria-haspopup="true">
-					<a href="{{URL::to('list-student')}}" class="kt-menu__link ">
+					<a href="{{URL::to('teacher/list-student')}}" class="kt-menu__link ">
 						<i class="kt-menu__link-icon fa fa-graduation-cap"></i>
 						<span class="kt-menu__link-text">Quản lý lớp học</span>
 					</a>

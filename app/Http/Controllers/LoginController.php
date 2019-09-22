@@ -19,6 +19,11 @@ class LoginController extends Controller
         return view('user/login');
     }
 
+    public function auth() {
+        if(isset(Auth::user()->name)) return view('user/teacher');
+        else return view('user/login');
+    }
+
     public function postLogin(Request $request) {
         $rules = [
             'username' => 'required|min:5',
